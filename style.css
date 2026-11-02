@@ -22,5 +22,14 @@ html {
 .square {
   width: 50px;
   height: 50px;
-  background-color: aqua;
+  background-color: blue;
+}
+
+.btn {
+  border: none;
+  color: white;
+  background-color: green;
+  padding: 8px 16px;
+  border-radius: 3px;
+  margin: 15px auto;
 }

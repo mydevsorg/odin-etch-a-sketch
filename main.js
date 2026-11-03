@@ -23,10 +23,22 @@ grid(16, 16);
 let gridSquares = document.querySelectorAll(".square");
 
 gridSquares.forEach((square) => {
-  square.addEventListener(
-    "mouseover",
-    () => (square.style.backgroundColor = "red"),
-  );
+  let count = 0;
+  let opacity = 1;
+  square.addEventListener("mouseover", () => {
+    count++;
+    let red = Math.trunc(Math.random() * 255) + 1;
+    let green = Math.trunc(Math.random() * 255) + 1;
+    let blue = Math.trunc(Math.random() * 255) + 1;
+    let randomColor = `rgb(${red},${green},${blue})`;
+
+    square.style.backgroundColor = randomColor;
+
+    if (count > 0 && count < 10) {
+      opacity -= 0.1;
+      square.style.opacity = opacity;
+    }
+  });
 });
 
 button.addEventListener("click", () => {
@@ -49,9 +61,21 @@ button.addEventListener("click", () => {
   gridSquares = document.querySelectorAll(".square");
 
   gridSquares.forEach((square) => {
-    square.addEventListener(
-      "mouseover",
-      () => (square.style.backgroundColor = "red"),
-    );
+    let count = 0;
+    let opacity = 1;
+    square.addEventListener("mouseover", () => {
+      count++;
+      let red = Math.trunc(Math.random() * 255) + 1;
+      let green = Math.trunc(Math.random() * 255) + 1;
+      let blue = Math.trunc(Math.random() * 255) + 1;
+      let randomColor = `rgb(${red},${green},${blue})`;
+
+      square.style.backgroundColor = randomColor;
+
+      if (count > 0 && count < 10) {
+        opacity -= 0.1;
+        square.style.opacity = opacity;
+      }
+    });
   });
 });
